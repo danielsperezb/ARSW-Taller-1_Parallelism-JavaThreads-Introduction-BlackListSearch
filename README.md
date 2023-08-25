@@ -2,7 +2,11 @@
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
 
-### Trabajo individual o en parejas
+### Autores del trabajo:
+- Daniel Esteban Perez
+- Daniel Fernando Moreno
+- Juan Felipe Vivas
+- Juan Francisco Teran
 
 Entrega: Martes en el transcurso del día.
 Entregar: Fuentes y documento PDF con las respuestas.

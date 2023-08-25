@@ -24,8 +24,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
         int numeroHilos = scanner.nextInt();
-        while ( numeroHilos % 2 != 0 ) {
-            System.out.println("LA CANTIDAD DE HILOS A USAR DEBE SER PAR!");
+        while ( numeroHilos % 2 != 0 || numeroHilos == 1) {
+            System.out.println("LA CANTIDAD DE HILOS A USAR DEBE SER UNO O CUALQUIER PAR!");
 
             System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
             numeroHilos = scanner.nextInt();

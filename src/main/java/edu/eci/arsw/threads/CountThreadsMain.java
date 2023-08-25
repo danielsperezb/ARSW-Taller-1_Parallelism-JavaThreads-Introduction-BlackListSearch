@@ -11,8 +11,16 @@ package edu.eci.arsw.threads;
  */
 public class CountThreadsMain {
     
-    public static void main(String a[]){
+    public static void main(String a[]) throws InterruptedException {
+  
+        CountThread primerHilo = new CountThread(0, 99);
+        CountThread segundoHilo = new CountThread(99, 199);
+        CountThread tercerHilo = new CountThread(200, 299);
         
+        primerHilo.start();
+        segundoHilo.start();
+        tercerHilo.start();
     }
     
 }
+

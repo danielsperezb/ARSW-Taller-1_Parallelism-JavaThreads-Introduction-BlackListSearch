@@ -21,8 +21,10 @@ public class CountThread extends Thread {
 
     @Override
     public void run() {
+        System.out.println("Este es el hilo que se está ejecutando: "+ Thread.currentThread().getName());
         for (int i = rangoInicial; i < rangoFinal; i++){
             System.out.println(i);
         }
     }
 }
+

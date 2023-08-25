@@ -17,6 +17,7 @@ public class CountThreadsMain {
         CountThread segundoHilo = new CountThread(99, 199);
         CountThread tercerHilo = new CountThread(200, 299);
         
+        System.out.println("Hilo principal: "+ Thread.currentThread().getName());
         primerHilo.start();
         segundoHilo.start();
         tercerHilo.start();

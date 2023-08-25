@@ -6,6 +6,7 @@
 package edu.eci.arsw.blacklistvalidator;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -14,10 +15,27 @@ import java.util.List;
 public class Main {
     
     public static void main(String a[]){
-        HostBlackListsValidator hblv=new HostBlackListsValidator();
-        List<Integer> blackListOcurrences=hblv.checkHost("200.24.34.55");
-        System.out.println("The host was found in the following blacklists:"+blackListOcurrences);
         
+        Scanner scanners = new Scanner(System.in);
+        System.out.println("Escriba ip de servidor sospechoso: ");
+        String hostSospechoso = scanners.next();
+        
+        long inicialTime = System.currentTimeMillis();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
+        int numeroHilos = scanner.nextInt();
+        while ( numeroHilos % 2 != 0 ) {
+            System.out.println("LA CANTIDAD DE HILOS A USAR DEBE SER PAR!");
+
+            System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
+            numeroHilos = scanner.nextInt();
+        }
+        
+        HostBlackListsValidator hblv =new HostBlackListsValidator();
+        List<Integer> blackListOcurrences=hblv.checkHost(hostSospechoso, numeroHilos);
+        long finalTime = System.currentTimeMillis();
+        
+        System.out.println("The host was found in the following blacklists:"+blackListOcurrences + " and the process took: "+ (finalTime - inicialTime) + "ms");
     }
     
 }

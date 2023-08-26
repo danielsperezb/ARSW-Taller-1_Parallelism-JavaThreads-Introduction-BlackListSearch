@@ -2,11 +2,11 @@
 ### Arquitecturas de Software
 ### Introducción al paralelismo - hilos
 
-### Autores del trabajo:
-- Daniel Esteban Perez
-- Daniel Fernando Moreno
-- Juan Felipe Vivas
-- Juan Francisco Teran
+### Cars (autores del trabajo):
+- Daniel Esteban Perez (McQueen)
+- Daniel Fernando Moreno (Guido)
+- Juan Felipe Vivas (Mate)
+- Juan Francisco Teran (Luigi)
 
 Entrega: Martes en el transcurso del día.
 Entregar: Fuentes y documento PDF con las respuestas.

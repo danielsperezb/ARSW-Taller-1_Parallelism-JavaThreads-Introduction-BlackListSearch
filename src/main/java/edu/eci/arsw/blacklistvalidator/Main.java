@@ -11,27 +11,33 @@ import java.util.Scanner;
 
 /**
  *
- 
-@author hcadavid*/
-
+ * @author Daniel Fernando Moreno Cerón
+ * @author Daniel Esteban Pérez Bohórquez
+ * @author Juan Francisco Terán Roman
+ * @author Juan Felipe Vivas Manrique
+ */
 public class Main {
 
-    public static void main(String a[]){
+	public static void main(String a[]) {
 
-        Scanner scanners = new Scanner(System.in);
-        System.out.println("Escriba ip de servidor sospechoso: ");
-        String hostSospechoso = scanners.next();
+		int nucleos = Runtime.getRuntime().availableProcessors();
+		System.out.println("Número de núcleos de procesamiento: " + nucleos);
 
-        long inicialTime = System.currentTimeMillis();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
-        int numeroHilos = scanner.nextInt();
+		Scanner scanners = new Scanner(System.in);
+		System.out.println("Escriba ip de servidor sospechoso: ");
+		String hostSospechoso = scanners.next();
 
-        HostBlackListsValidator hblv =new HostBlackListsValidator();
-        List<Integer> blackListOcurrences=hblv.checkHost(hostSospechoso, numeroHilos);
-        long finalTime = System.currentTimeMillis();
+		long inicialTime = System.currentTimeMillis();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
+		int numeroHilos = scanner.nextInt();
 
-        System.out.println("The host was found in the following blacklists:"+blackListOcurrences + " and the process took: "+ (finalTime - inicialTime) + "ms");
-    }
+		HostBlackListsValidator hblv = new HostBlackListsValidator();
+		List<Integer> blackListOcurrences = hblv.checkHost(hostSospechoso, numeroHilos);
+		long finalTime = System.currentTimeMillis();
+
+		System.out.println("The host was found in the following blacklists:" + blackListOcurrences
+				+ " and the process took: " + (finalTime - inicialTime) + "ms");
+	}
 
 }

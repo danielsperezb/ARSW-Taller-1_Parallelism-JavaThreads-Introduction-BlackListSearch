@@ -1,8 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ 
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
 package edu.eci.arsw.blacklistvalidator;
 
 import java.util.List;
@@ -10,8 +11,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author hcadavid
- */
+ 
+@author hcadavid*/
+
 public class Main {
 
     public static void main(String a[]){
@@ -24,12 +26,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
         int numeroHilos = scanner.nextInt();
-        while ( numeroHilos % 2 != 0 || numeroHilos == 1) {
-            System.out.println("LA CANTIDAD DE HILOS A USAR DEBE SER UNO O CUALQUIER PAR!");
-
-            System.out.println("Escriba la cantidad de hilos que quiere utilizar: ");
-            numeroHilos = scanner.nextInt();
-        }
 
         HostBlackListsValidator hblv =new HostBlackListsValidator();
         List<Integer> blackListOcurrences=hblv.checkHost(hostSospechoso, numeroHilos);
